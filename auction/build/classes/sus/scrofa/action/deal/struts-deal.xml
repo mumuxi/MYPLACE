@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="struts-deal" extends="struts-default" namespace="/deal">
+		<action name="List" class="dealAction" method="toList">
+			<result>/WEB-INF/view/front/user/deal.jsp</result>
+			<result name="error" type="redirectAction">
+				<param name="actionName">Login</param>
+				<param name="namespace">/</param>
+			</result>
+		</action>
+		
+		<action name="Confirm" class="dealAction" method="toConfirm">
+			<result>/WEB-INF/view/front/user/confirm.jsp</result>
+			<result name="error" type="redirectAction">
+				<param name="actionName">Login</param>
+				<param name="namespace">/</param>
+			</result>
+		</action>
+		
+		<action name="ProcessConfirm" class="dealAction" method="confirm">
+			<result type="redirectAction">
+				<param name="actionName">List</param>
+				<param name="namespace">/deal</param>
+			</result>
+			<result name="error" type="redirectAction">
+				<param name="actionName">Login</param>
+				<param name="namespace">/</param>
+			</result>
+		</action>
+		
+		<action name="ProcessPay" class="dealAction" method="pay">
+			<result type="redirectAction">
+				<param name="actionName">List</param>
+				<param name="namespace">/deal</param>
+			</result>
+			<result name="error" type="redirectAction">
+				<param name="actionName">Login</param>
+				<param name="namespace">/</param>
+			</result>
+		</action>
+		
+		<action name="ProcessReceive" class="dealAction" method="receive">
+			<result type="redirectAction">
+				<param name="actionName">List</param>
+				<param name="namespace">/deal</param>
+			</result>
+			<result name="error" type="redirectAction">
+				<param name="actionName">Login</param>
+				<param name="namespace">/</param>
+			</result>
+		</action>
+		
+	</package>
+
+</struts>

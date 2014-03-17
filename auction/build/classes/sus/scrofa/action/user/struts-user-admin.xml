@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="struts-user-admin" extends="struts-default" namespace="/user/admin">
+		
+		<!-- 管理员登录 -->
+		<action name="ProcessLogin" class="loginAction" method="login">
+			<result type="redirectAction">
+				<param name="actionName">Index</param>
+				<param name="namespace">/user/admin</param>
+			</result>
+			<result name="error">/WEB-INF/view/sys/user/login.jsp</result>
+		</action>
+		
+		<!-- 管理员安全退出 -->
+		<action name="Logout" class="loginAction" method="logout">
+			<result>/WEB-INF/view/sys/user/login.jsp</result>
+		</action>
+		
+		<!-- 转到后台主页 -->
+		<action name="Index" class="loginAction" method="checkAdminLogin">
+			<result>/WEB-INF/view/sys/index.jsp</result>
+			<result name="error">/WEB-INF/view/sys/user/login.jsp</result>
+		</action>
+		
+		<!-- 转到用户操作主页 -->
+		<action name="List" class="userAction" method="toList">
+			<result>/WEB-INF/view/sys/user/list.jsp</result>
+			<result name="error">/WEB-INF/view/sys/user/login.jsp</result>
+		</action>
+		
+		<!-- 转到用户详细信息页面 -->
+		<action name="Detail" class="userAction" method="toDetail">
+			<result>/WEB-INF/view/sys/user/detail.jsp</result>
+			<result name="error">/WEB-INF/view/sys/user/login.jsp</result>
+		</action>
+
+		<!-- 转到添加用户页面 -->
+		<action name="Add" class="userAction" method="checkAdminLogin">
+			<result>/WEB-INF/view/sys/user/add.jsp</result>
+			<result name="error">/WEB-INF/view/sys/user/login.jsp</result>
+		</action>
+		
+		<!-- 处理添加用户 -->
+		<action name="ProcessAdd" class="userAction" method="add">
+			<result type="redirectAction">
+				<param name="actionName">Detail</param>
+				<param name="namespace">/user/admin</param>
+				<param name="id">${user.id}</param>
+			</result>
+			<result name="paramError" type="redirectAction">
+				<param name="actionName">List</param>
+				<param name="namespace">/user/admin</param>
+			</result>
+			<result name="error">/WEB-INF/view/sys/user/login.jsp</result>
+		</action>
+		
+		<!-- 转到修改用户信息页面 -->
+		<action name="Update" class="userAction" method="toDetail">
+			<result>/WEB-INF/view/sys/user/update.jsp</result>
+			<result name="error">/WEB-INF/view/sys/user/login.jsp</result>
+		</action>
+		
+		<!-- 处理修改用户 -->
+		<action name="ProcessUpdate" class="userAction" method="update">
+			<result type="redirectAction">
+				<param name="actionName">Detail</param>
+				<param name="namespace">/user/admin</param>
+				<param name="id">${id}</param>
+			</result>
+			<result name="paramError" type="redirectAction">
+				<param name="actionName">List</param>
+			</result>
+			<result name="error">/WEB-INF/view/sys/user/login.jsp</result>
+		</action>
+		
+		<!-- 处理删除用户 -->
+		<action name="ProcessDelete" class="userAction" method="delete">
+			<result type="redirectAction">
+				<param name="actionName">List</param>
+				<param name="namespace">/user/admin</param>
+			</result>
+			<result name="error" type="redirectAction">
+				<param name="actionName">Admin</param>
+				<param name="namespace">/</param>
+			</result>
+		</action>
+	</package>
+
+</struts>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="struts-show-admin" extends="struts-default" namespace="/show/admin">
+		<!-- 转到晒图主页 -->
+		<action name="List" class="showAdminAction" method="toList">
+			<result>/WEB-INF/view/sys/show/list.jsp</result>
+			<result name="error">/WEB-INF/view/sys/user/login.jsp</result>
+		</action>
+		
+		<!-- 转到晒图详细信息页面 -->
+		<action name="Detail" class="showAdminAction" method="toDetail">
+			<result>/WEB-INF/view/sys/show/detail.jsp</result>
+			<result name="error">/WEB-INF/view/sys/user/login.jsp</result>
+		</action>
+		
+		<!-- 转到修改晒图信息页面 -->
+		<action name="Update" class="showAdminAction" method="toDetail">
+			<result>/WEB-INF/view/sys/show/update.jsp</result>
+			<result name="error">/WEB-INF/view/sys/user/login.jsp</result>
+		</action>
+		
+		<!-- 处理修改晒图信息 -->
+		<action name="ProcessUpdate" class="showAdminAction" method="update">
+			<result type="redirectAction">
+				<param name="actionName">Detail</param>
+				<param name="namespace">/show/admin</param>
+				<param name="id">${id}</param>
+			</result>
+			<result name="paramError" type="redirectAction">
+				<param name="actionName">List</param>
+				<param name="namespace">/show/admin</param>
+			</result>
+			<result name="error">/WEB-INF/view/sys/user/login.jsp</result>
+		</action>
+	</package>
+
+</struts>

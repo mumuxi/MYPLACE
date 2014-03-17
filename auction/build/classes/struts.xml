@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.multipart.maxSize" value="53505480"/>
+	<constant name="struts.devMode" value="true" />
+    <constant name="struts.objectFactory" value="org.apache.struts2.spring.StrutsSpringObjectFactory" />
+    <constant name="struts.ui.theme" value="simple" />
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <constant name="struts.serve.static.browserCache" value="false" />
+    
+	<package name="default" extends="struts-default" namespace="/">
+		<!-- 
+		<default-action-ref name="unknown" />
+		 -->
+		<global-results>
+			<result name="error">/WEB-INF/view/error/error.jsp</result>
+			<result name="input">/WEB-INF/view/error/input.jsp</result>
+		</global-results>
+		
+		<action name="unknown">
+			<result>/WEB-INF/view/error/unknown_action.jsp</result>
+		</action>
+	</package>
+	
+	<include file="sus/scrofa/action/dispatch/struts-dispatch.xml"/>
+	<include file="sus/scrofa/action/user/struts-user.xml"/>
+	<include file="sus/scrofa/action/user/struts-user-admin.xml"/>
+	<include file="sus/scrofa/action/product/struts-bid.xml"/>
+	<include file="sus/scrofa/action/product/struts-product.xml"/>
+	<include file="sus/scrofa/action/product/struts-product-admin.xml"/>
+	<include file="sus/scrofa/action/deal/struts-deal.xml"/>
+	<include file="sus/scrofa/action/deal/struts-deal-admin.xml"/>
+	<include file="sus/scrofa/action/notice/struts-notice.xml"/>
+	<include file="sus/scrofa/action/notice/struts-notice-admin.xml"/>
+	<include file="sus/scrofa/action/show/struts-show.xml"/>
+	<include file="sus/scrofa/action/show/struts-show-admin.xml"/>
+</struts>

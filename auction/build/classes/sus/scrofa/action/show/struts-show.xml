@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="struts-show" extends="struts-default" namespace="/show">
+		<!-- 转到晒图详细信息 -->
+		<action name="Detail" class="showAction" method="toDetail">
+			<result>/WEB-INF/view/front/show/detail.jsp</result>
+		</action>
+		
+		<!-- 转到玩家晒图列表，首页点击“玩家晒图”时触发 -->
+		<action name="List" class="showAction" method="toList">
+			<result>/WEB-INF/view/front/show/list.jsp</result>
+		</action>
+		
+		<!-- 转到添加晒图页面 -->
+		<action name="Add" class="showAction" method="toAdd">
+			<result>/WEB-INF/view/front/show/add.jsp</result>
+			<result name="error" type="redirectAction">
+				<param name="actionName">Login</param>
+				<param name="namespace">/</param>
+			</result>
+			<result name="paramError" type="redirectAction">
+				<param name="actionName">List</param>
+				<param name="namespace">/deal</param>
+			</result>
+		</action>
+		
+		<!-- 处理添加晒图 -->
+		<action name="ProcessAdd" class="showAction" method="add">
+			<result type="redirectAction">
+				<param name="actionName">Detail</param>
+				<param name="namespace">/show</param>
+				<param name="id">${showPic.id}</param>
+			</result>
+			<result name="paramError" type="redirectAction">
+				<param name="actionName">List</param>
+				<param name="namespace">/deal</param>
+			</result>
+			<result name="error">/WEB-INF/view/sys/user/login.jsp</result>
+		</action>
+		
+		
+	</package>
+
+</struts>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="struts-deal-admin" extends="struts-default" namespace="/deal/admin">
+		<!-- 转到所有用户的订单列表 -->
+		<action name="List" class="dealAdminAction" method="toList">
+			<result>/WEB-INF/view/sys/deal/list.jsp</result>
+			<result name="error" type="redirectAction">
+				<param name="actionName">Login</param>
+				<param name="namespace">/</param>
+			</result>
+		</action>
+
+		<action name="ProcessDeliver" class="dealAdminAction" method="deliver">
+			<result type="redirectAction">
+				<param name="actionName">List</param>
+				<param name="namespace">/deal/admin</param>
+			</result>
+			<result name="error" type="redirectAction">
+				<param name="actionName">Admin</param>
+				<param name="namespace">/</param>
+			</result>
+		</action>
+		
+		<action name="ProcessDelete" class="dealAdminAction" method="delete">
+			<result type="redirectAction">
+				<param name="actionName">List</param>
+				<param name="namespace">/deal/admin</param>
+			</result>
+			<result name="error" type="redirectAction">
+				<param name="actionName">Admin</param>
+				<param name="namespace">/</param>
+			</result>
+		</action>
+	</package>
+
+</struts>

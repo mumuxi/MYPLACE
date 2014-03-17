@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="struts-user" extends="struts-default" namespace="/user">
+		<!-- 普通会员登录 -->
+		<action name="ProcessLogin" class="loginAction" method="login">
+			<result type="redirectAction">
+				<param name="actionName">Index</param>
+				<param name="namespace">/</param>
+			</result>
+			<result name="error" type="redirectAction">
+				<param name="actionName">Login</param>
+				<param name="namespace">/</param>
+			</result>
+		</action>
+		
+		<!-- 普通会员安全退出 -->
+		<action name="Logout" class="loginAction" method="logout">
+			<result type="redirectAction">
+				<param name="actionName">Index</param>
+				<param name="namespace">/</param>
+			</result>
+		</action>
+		
+		<!-- 转到个人中心 -->
+		<action name="InfoCenter" class="userAction" method="toInfoCenter">
+			<result>/WEB-INF/view/front/user/infocenter.jsp</result>
+			<result name="error" type="redirectAction">
+				<param name="actionName">Login</param>
+				<param name="namespace">/</param>
+			</result>
+		</action>
+		
+		<!-- 处理普通会员修改资料 -->
+		<action name="ProcessUpdate" class="userAction" method="update">
+			<result type="redirectAction">
+				<param name="actionName">InfoCenter</param>
+				<param name="namespace">/user</param>
+			</result>
+			<result name="error" type="redirectAction">
+				<param name="actionName">Login</param>
+				<param name="namespace">/</param>
+			</result>
+		</action>
+		
+		<!-- 处理注册普通会员 -->
+		<action name="ProcessRegister" class="userAction" method="register">
+			<result type="redirectAction">
+				<param name="actionName">Login</param>
+				<param name="namespace">/user</param>
+				<param name="name">${user.name}</param>
+				<param name="password">${user.password}</param>
+			</result>
+			<result name="input" type="redirectAction">
+				<param name="actionName">Register</param>
+				<param name="namespace">/</param>
+			</result>
+		</action>
+	</package>
+
+</struts>

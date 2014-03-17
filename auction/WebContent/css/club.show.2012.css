@@ -1,0 +1,64 @@
+/*show*/
+#show .mt{height:34px;line-height:34px;border:1px solid #e6e6e6;padding-left:14px;background:url(/auction/images/bg_mt.jpg) repeat-x;}
+#show .mt h2{font-size:16px;}
+#show .o-item{float:left;width:705px;background:#f6f6f6;padding:20px 0 40px 15px;}
+#show .item{position:relative;padding-left:100px;overflow:hidden;zoom:1;}
+#show .i-item{zoom:1;overflow:hidden;width:605px;}
+#show .fore .i-item,#show .o-item .fore{overflow:visible;}
+#show .o-item .fore{z-index:3;}
+#show .tit{position:absolute;width:90px;height:25px;text-align:right;top:0;left:0;}
+#show .tit s{color:#ff0000;margin-left:3px;}
+#o-select{position:relative;float:left;width:275px;height:23px;background:#fff;line-height:23px;cursor:pointer;padding-left:3px;padding-right:5px;border-color:#ABADB3 #E3E9EF #E3E9EF #ABADB3;border-style:solid;border-width:1px;z-index:8;}
+.value{width:275px;height:23px;overflow:hidden;background:url(i/bg_select.png) no-repeat right;zoom:1}
+#o-select s{position:absolute;right:3px;top:6px;width:12px;height:12px;background:url(/auction/images/icoin.png) -152px -100px;}
+#select{position:absolute;background:#fff;width:283px;height:270px;left:-1px;top:23px;border-left:1px solid #abadb3;border-right:1px solid #dbdfe6;z-index:9;}
+#select .i-select{background:#FFF;border-top:1px dotted #dedede;overflow:hidden;z-index:10;}
+#select .i-select.curr{background:#fff6e2}
+#select .i-select .p-img{float:left;}
+#select .i-select .p-name{float:right;height:5em;width:228px;padding-left:5px;}
+#select .mb{background:#e7e7e7;text-align:center;border-bottom:1px solid #DBDFE6;height:26px;line-height:26px;}
+#select .mb a{color:#005ea7}
+#show .title{width:578px;height:23px;border-color:#ABADB3 #E3E9EF #E3E9EF #ABADB3;border-style:solid;border-width:1px;}
+#cont{width:578px;height:163px;border-color:#ABADB3 #E3E9EF #E3E9EF #ABADB3;border-style:solid;border-width:1px;}
+#show .text .tips{float:right;padding-right:20px;}
+#show .text .err{float:left;}
+#show .s-list li{overflow:hidden;margin:10px 0;zoom:1}
+#show .s-list .s-img{float:left;}
+#show .s-list .s-set{float:right;width:270px;padding-right:20px;padding-top:15px;}
+#show .s-list .s-set .cover{vertical-align:middle;margin-top:-2px;margin-bottom:1px;}
+#show .s-list .s-set div{margin-bottom:5px;}
+#show .s-list .s-set label{font-weight:bold;}
+#show .s-list .del{height:21px;width:60px;border:none;background:url(i/icoin.png) -84px -96px;line-height:21px;border:0;}
+#show .s-list .s-set textarea{width:270px;border-color:#ABADB3 #E3E9EF #E3E9EF #ABADB3;border-style:solid;border-width:1px;}
+#upload{display:inline-block;width:81px;height:26px;line-height:26px;text-align:center;background:url(i/icoin.png) 0 -123px no-repeat;}
+#show .release{width:81px;height:30px;border:none;background:url(/auction/images/icoin.png) 0 -92px no-repeat;}
+#show .tips{padding-left:5px;line-height:21px;color:#999999;}
+#show .err{height:21px;}
+#show .expl{float:left;width:240px;padding:20px 15px 0 15px;}
+#show .expl h3{font-size:12px;height:20px;line-height:20px;}
+#show .expl li{margin:9px 0;}
+#show .expl li a{color:#005ea7;}
+.pickbutton{
+	background: url(/auction/images/XPButtonUploadText_61x22.png) no-repeat scroll 0px 0px ; 	 
+	width:61px;
+	height:22px; 
+	cursor:pointer;
+}
+.pickbuttonhover {
+	background: url(/auction/images/XPButtonUploadText_61x22.png) no-repeat scroll 0px -22px ; 
+	width:61px;
+	height:22px;
+	cursor:pointer;
+}
+.pickbuttonclick {
+	background: url(/auction/images/XPButtonUploadText_61x22.png) no-repeat scroll 0px -44px ; 
+	width:61px;
+	height:22px;
+	cursor:pointer;
+}
+.pickbuttonout {
+	background: url(/auction/images/XPButtonUploadText_61x22.png) no-repeat scroll 0px 0px ; 
+	width:61px;
+	height:22px;
+	cursor:pointer;
+}

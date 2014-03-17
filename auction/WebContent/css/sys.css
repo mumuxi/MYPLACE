@@ -1,0 +1,288 @@
+@CHARSET "UTF-8";
+
+body,div,p,h1,h2,h3,h4,h5,ul,li,dl,dd,dt {
+	margin: 0px;
+	padding: 0px;
+}
+
+.cls {
+	clear: both;
+	width: 0px;
+	height: 0px;
+	text-height: 0px;
+}
+
+ul,li {
+	list-style: none;
+}
+
+#head {
+	width: 1024px;
+	height: 100px;
+	margin: 0px auto;
+}
+
+#head p {
+	float: right;
+	height: 30px;
+	text-height: 30px;
+	margin-top: 10px;
+}
+
+#logo {
+	width: 300px;
+	height: 100px;
+	float: left;
+	border: 1px solid blue;
+}
+
+#nav {
+	width: 693px;
+	height: 30px;
+	margin-top: 30px;
+	background-image: url(/auction/images/admin/nav_bar.jpg);
+	margin-left: 10px;
+	float: left;
+}
+
+#nav ul {
+	height: 30px;
+	width: 640px;
+	margin: 0px auto;
+}
+
+#nav li {
+	width: 80px;
+	height: 30px;
+	float: left;
+	line-height: 30px;
+	text-align: center;
+}
+
+#nav a {
+	font-size: 12pt;
+	color: white;
+	text-decoration: none;
+}
+
+#nav li:hover {
+	background: url(/auction/images/admin/nav_hover_bar.jpg) no-repeat;
+}
+
+#content {
+	width: 1024px;
+	margin: 20px auto 0px;
+}
+
+#main {
+	height: 460px;
+	width: 1024px;
+	margin: 0px auto;
+}
+
+#sub_nav {
+	width: 1024px;
+	height: 30px;
+	border-bottom: 2px dashed grey;
+}
+
+#sub_nav_left {
+	float: left;
+	height: 30px;
+	line-height: 30px;
+}
+
+#sub_nav_right {
+	float: right;
+	height: 30px;
+	line-height: 30px;
+	height: 30px
+}
+
+#left_bar {
+	width: 300px;
+	height: 500px;
+	float: left;
+	border: 1px solid grey;
+	/*background-color: #081D50;*/
+}
+
+#right_content {
+	width: 710px;
+	float: left;
+}
+
+.user_logo {
+	width: 100px;
+	height: 100px;
+}
+
+.list_table {
+	margin: 20px auto;
+	border-collapse: collapse;
+	border-bottom: 2px solid black;
+	text-height: 30px;
+	text-align: center;
+}
+
+.list_table_th {
+	height: 30px;
+	background-color: #E0EBEB;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+}
+
+.w300 {
+	width: 300px;
+}
+
+.w200 {
+	width: 200px;
+}
+
+.w150 {
+	width: 150px;
+}
+
+.w100 {
+	width: 100px;
+}
+
+.w50 {
+	width: 50px;
+}
+
+.list_table td {
+	height: 30px;
+}
+
+.detail_table {
+	margin: 20px auto;
+	text-height: 30px;
+	border-collapse: collapse;
+}
+
+.detail_table th {
+	width: 150px;
+	height: 30px;
+	text-align: center;
+	text-height: 30px;
+	text-align: center;
+}
+
+.detail_table td {
+	width: 420px;
+	height: 30px;
+	text-height: 30px;
+}
+
+.center_td {
+	text-align: center;
+}
+
+#page_nav {
+	border: 1px solid cyan;
+	text-align: center;
+}
+
+/*原来的*/
+
+.login {
+	width: 300px;
+	position: relative;
+}
+
+.loginName {
+	width: 200px;
+	height: 20px;
+	line-height: 20px;
+}
+
+#conleft {
+	float: left;
+	width: 41%;
+	font-family: 华文细黑;
+	margin: 30px 40px;
+}
+
+#conright {
+	float: left;
+	margin-left: 30px;
+	margin-top: 10px;
+	height: 458px;
+}
+
+.lb {
+	font-size: 12px;
+	font-weight: 900;
+	margin-left: 20px;
+}
+
+.regt {
+	font-size: 12px;
+	margin-left: 40px;
+	color: gray;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.out_box {
+	border: 1px solid #ccc;
+	background: #fff;
+	font: 14px/20px Tahoma;
+}
+
+.list_box {
+	border-bottom: 1px solid #eee;
+	padding: 0 5px;
+	height: 25px;
+	line-height: 25px;
+	cursor: pointer;
+}
+
+.focus_box {
+	background: #f0f3f9;
+	height: 25px;
+}
+
+.mark_box {
+	color: #c00;
+}
+
+#head_left {
+	margin-top: 2px;
+	float: left;
+}
+
+#head_right {
+	height: 65px;
+	margin-top: 10px;
+	text-align: right;
+	line-height: 65px;
+}
+
+#head_right a:link {
+	color: black;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+#head_right  a:hover {
+	color: orange;
+	text-decoration: none;
+}
+
+.footer_link {
+	line-height: 30px;
+	background: #E2E2E2;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+.footer_link li {
+	display: inline;
+}
+
+.footer_link a {
+	text-decoration: none;
+}

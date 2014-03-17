@@ -1,0 +1,122 @@
+@charset "gb2312";
+/* CSS Document */
+.right .tab{margin-top:10px;margin-bottom:10px}
+.right .i-m {float:left;width:600px;padding-top:10px}
+.right .i-m .item{padding-bottom:10px;}
+.right .item .label{width:185px;text-align:right;color:#666666}
+.right .i-m .form .text{width:140px}
+.right .i-m .form .text1{ width:300px}
+.right .i-m .form .area{width:308px;height:65px;float:none}
+.right .fl{width:400px}
+.right .i-m h5{color:#cc0000;border-bottom:1px solid #e6e6e6;line-height:30px;padding-left:15px;margin-bottom:20px}
+.username{float:left}
+.right-extra{float:right;width:210px;padding-top:20px}
+.right-extra .m{width:205px;text-align:center;}
+.i-pic{padding-right:2px; margin-right: 60px;}
+.right-extra .m .btns{line-height:30px}
+.right-extra .fore{background:url(i/self.gif);height:10px;overflow:hidden}
+.right-extra .fore1{background:url(i/self.gif) 0 -3px;height:13px;overflow:hidden}
+.ssub strong,.ssub span,.smod{margin-right:10px}
+.rank s{float:left;width:16px;height:16px;background:url(i/rank2011.gif);margin-right:3px;margin-top:1px}
+.r2 s{background-position:0 -17px}
+.r3 s{background-position:0 -34px}
+.r4 s{background-position:0 -51px}
+.r5 s{background-position:0 -68px}
+.r6 s{background-position:0 -87px}
+.r7 s{background-position:0 -104px}
+.r8 s{background-position:0 -121px}
+.r9 s{background-position:0 -138px}
+.r10 s{background-position:0 -154px}
+.item .fl .rank a{color:#cc0000}
+.item .fl label{margin-right:10px}
+.form .item .fl .btn-7,.form .item .fl .btn-8{color:#333333}
+*html .btn-8 s{margin-right:8px;}
+.addinfo .mc{position:relative}
+.addinfo .mc i,.selfinfo .prompt-01 i{position:absolute;width:88px;height:156px;bottom:0;right:0}
+#education  .addinfo .mc i,#profession .addinfo .mc i,.selfinfo .prompt-01 i{background:url(i/t.gif) no-repeat}
+#education  .addinfo .mc i{background-position:-89px 0 }
+.selfinfo .prompt-01 i{background-position:-178px 0 }
+#education .mt h3,#profession .mt h3{float:left;color:#cc0000;line-height:30px;padding-left:10px}
+#profession{padding-top:10px}
+#education .item,#profession .item{padding:10px 0;zoom:1}
+#education .extra a,#profession .extra a{font-weight:normal}
+.selfinfo .prompt-01{padding:0 10px;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;zoom:1}
+.selflex .label{width:100px;text-align:right;}
+.tabs li{float:left}
+.tabs li a{display:block;height:16px;width:16px;text-align:center; font-family:Verdana, Geneva, sans-serif;padding-bottom:3px}
+.tabs li.curr a{background:#ff6600;color:#fff}
+.tabs li.curr a:link,.tabs li.curr a:visited,.tabs li.curr a:hover,.tabs li.curr a:active{color:#fff}
+.selflex .m1{height:205px}
+.selflex .list-h{padding:10px;overflow-y: scroll;height:199px}
+.selflex .list-h li{width:165px;overflow:hidden;line-height:20px;height:20px}
+.selflex .item1 .label{width:auto}
+.selflex .item1 a.btn-12:link,.selflex .item1 a.btn-12:visited,.selflex .item1 a.btn-12:hover{color:#cccccc; cursor:default;text-decoration:none}
+.selflex .btns{text-align:center;padding:10px}
+.selflex .item{padding-bottom:10px}
+.selflex .warn{text-align:center;margin:104px auto 0;width:160px}
+a.ftx-03:link,a.ftx-03:visited{color:#999}
+.selflex .warn s,.warn .mc s{background:url(i/icon.gif) -64px -59px;width:16px;height:16px;vertical-align:middle}
+.selflex .warn s{float:left;margin-right:5px;}
+.warn .mc s{display:inline-block;margin-right:5px;margin-top:-2px}
+.warn .mc{line-height:22px;text-align:center}
+.warn .btns{text-align:center;padding-top:10px}
+.warn .btns a{margin:0 5px}
+.list li{padding:0 10px;border-top:1px solid #e6e6e6;margin-top:-1px;overflow:hidden;zoom:1}
+.list li .fore1{width:370px;font-size:14px}
+.list li .fore2{width:340px;color:#999999}
+.list li .fore3{width:65px}
+.list li .fore1,.list li .fore2,.list li .fore3{float:left;height:30px;overflow:hidden;line-height:30px}
+.list li .prompt-01{margin:3px 0 10px}
+.list li .pb{top:-19px;left:15px}
+.selfinfo .prompt-01 .i-mt{height:30px;line-height:30px;border-bottom:1px solid #e6e6e6}
+.selfinfo .prompt-01 .i-mt h4{font-weight:normal;padding-left:10px}
+.selfinfo .prompt-01 .form{padding-top:10px}
+div.prompt-06{margin-top:5px;float:left;color:#666666}
+.prompt-error{margin-top:5px;float:left;color:#cc0000}
+.btn-8{margin-right:10px}
+.addinfo{margin-top:0}
+.addinfo .mt{border-bottom:none}
+.selfinfo{margin-top:-1px}
+#baseinfo .i-m .item{padding-bottom:20px}
+#baseinfo .sele{width:100px;}
+.prompt-03{border:1px solid #edd28b;background:#FFFDEE;text-align:left;padding:10px;margin-bottom:10px}
+#self1 .mc{padding:10px}
+.msg-text{color:#666666;float:left;line-height:25px;}
+#baseinfo .btn-12{color:#333;margin-left:5px}
+#selflex1,#selflex2,#selflex3{padding-left:15px}
+#selflex1 .form,#selflex2  .form,#selflex3 .form{margin-left:42px}
+#selflex1 .btn,#selflex2 .btn,#selflex3 .btn{margin:0 3px}
+#selflex1 h3,#selflex2  h3,#selflex3 h3{margin-bottom:3px}
+#selflex3 .fl a{color:#005AA0}
+#selflex3 p{margin-bottom:5px}
+.msg-warn,.msg-sure,.msg-why{float:left;width:32px;height:32px;background:url(i/icon-msg.png) no-repeat}
+.msg-sure{background-position:-64px 0}
+.msg-why{background-position:-32px 0}
+.icon-orderly,.msuc .mc s{display:inline-block;*zoom:1;background:url(i/icon-msg.png) no-repeat -96px 0;width:16px;height:16px;line-height:0;font-size:0; vertical-align:middle}
+.right .form .item{margin-bottom:0}
+.msuc .mc s{margin-right:10px}.msuc {text-align:center}.msuc .btns{padding-top:10px}
+.icon-succ03,.icon-warn03{display:inline-block;*zoom:1;font-size:0;line-height:0;overflow:hidden;background:url(i/icon-msg.png) no-repeat;width:32px;height:32px; vertical-align:top;margin-right:10px}
+.icon-succ03{background-position:-64px 0}
+.flexbox {padding-left:18px}
+.flexbox strong{font-size:14px}
+.flexbox .fl{width:250px}
+.flexbox .icon-succ03,.flexbox .icon-warn03{float:left}
+.flexbox .btns{text-align:center}
+.flexbox p a:link,.flexbox p a:visited{color:#005EA7}
+.flexbox p{margin-bottom:10px;margin-left:48px}
+.flexbox .label{color:#666666;width:120px;text-align:right}
+.flexbox .item{margin-bottom:15px}
+.flexbox .btn{margin-right:10px}
+#flexboxnick .mc{padding-left:10px;padding-right:10px}
+#flexboxnick .thickclose{display:none}
+#flexboxnick p{margin-bottom:15px}
+#flexboxnick .item{margin-bottom:10px}
+#flexboxnick .btns{text-align:center}
+#flexboxnick .btn{margin-right:10px}
+#flexboxnick .text{margin-bottom:3px}
+#flexboxnick .fl{width:250px}
+#flexboxnick .msg-text,#flexboxnick .msg-error{line-height:normal}
+#flexboxnick01 .lightboxc{padding-left:20px;padding-top:30px}
+#flexboxnick01 .icon-succ02{float:left}
+#flexboxnick01 .lightboxinfo{margin-left:58px}
+#infoimg {width: 200px; height: 200px;}

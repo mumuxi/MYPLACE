@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="struts-product" extends="struts-default" namespace="/product">
+		<!-- 转到商品详细信息页面 -->
+		<action name="Detail" class="productAction" method="toDetail">
+			<result>/WEB-INF/view/front/product/detail.jsp</result>
+		</action>
+	</package>
+
+</struts>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="struts-product-admin" extends="struts-default" namespace="/product/admin">
+		<!-- 转到商品管理主页 -->
+		<action name="List" class="productAdminAction" method="toList">
+			<result>/WEB-INF/view/sys/product/list.jsp</result>
+			<result name="error">/WEB-INF/view/sys/user/login.jsp</result>
+		</action>
+		
+		<!-- 转到商品详细信息页面 -->
+		<action name="Detail" class="productAdminAction" method="toDetail">
+			<result>/WEB-INF/view/sys/product/detail.jsp</result>
+			<result name="error">/WEB-INF/view/sys/user/login.jsp</result>
+		</action>
+
+		<!-- 转到添加商品页面 -->
+		<action name="Add" class="productAdminAction" method="checkAdminLogin">
+			<result>/WEB-INF/view/sys/product/add.jsp</result>
+			<result name="error">/WEB-INF/view/sys/user/login.jsp</result>
+		</action>
+		
+		<!-- 处理添加商品 -->
+		<action name="ProcessAdd" class="productAdminAction" method="add">
+			<result type="redirectAction">
+				<param name="actionName">Detail</param>
+				<param name="namespace">/product/admin</param>
+				<param name="id">${product.id}</param>
+			</result>
+			<result name="paramError" type="redirectAction">
+				<param name="actionName">List</param>
+			</result>
+			<result name="error">/WEB-INF/view/sys/user/login.jsp</result>
+		</action>
+		
+		<!-- 转到修改商品信息页面 -->
+		<action name="Update" class="productAdminAction" method="toDetail">
+			<result>/WEB-INF/view/sys/product/update.jsp</result>
+			<result name="error">/WEB-INF/view/sys/user/login.jsp</result>
+		</action>
+		
+		<!-- 处理修改商品信息 -->
+		<action name="ProcessUpdate" class="productAdminAction" method="update">
+			<result type="redirectAction">
+				<param name="actionName">Detail</param>
+				<param name="namespace">/product/admin</param>
+				<param name="id">${id}</param>
+			</result>
+			<result name="paramError" type="redirectAction">
+				<param name="actionName">List</param>
+				<param name="namespace">/product/admin</param>
+			</result>
+			<result name="error">/WEB-INF/view/sys/user/login.jsp</result>
+		</action>
+		
+		<!-- 处理删除商品信息 -->
+		<action name="ProcessDelete" class="productAdminAction" method="delete">
+			<result type="redirectAction">
+				<param name="actionName">List</param>
+				<param name="namespace">/product/admin</param>
+			</result>
+			<result name="paramError" type="redirectAction">
+				<param name="actionName">List</param>
+				<param name="namespace">/product/admin</param>
+			</result>
+			<result name="error" type="redirectAction">
+				<param name="actionName">Admin</param>
+				<param name="namespace">/</param>
+			</result>
+		</action>
+	</package>
+
+</struts>

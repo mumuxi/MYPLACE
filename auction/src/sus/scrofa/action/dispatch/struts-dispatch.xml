@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="struts-dispatch" extends="struts-default" namespace="/">
+		<!-- 转到前台首页 -->
+		<action name="Index" class="dispatchAction" method="toIndex">
+			<result>/WEB-INF/view/front/index.jsp</result>
+		</action>
+		
+		<!-- 转到正在热拍列表页面 -->
+		<action name="Hot" class="dispatchAction" method="toHot">
+			<result>/WEB-INF/view/front/product/hot.jsp</result>
+		</action>
+		
+		<!-- 转到即将拍卖列表页面 -->
+		<action name="Right" class="dispatchAction" method="toRight">
+			<result>/WEB-INF/view/front/product/right.jsp</result>
+		</action>
+		
+		<!-- 转到前台登录界面 -->
+		<action name="Login" class="dispatchAction" method="execute">
+			<result>/WEB-INF/view/front/login.jsp</result>
+		</action>
+		
+		<!-- 转到前台注册界面 -->
+		<action name="Register" class="dispatchAction" method="execute">
+			<result>/WEB-INF/view/front/register.jsp</result>
+		</action>
+		
+		<!-- 转到后台登录界面 -->
+		<action name="Admin" class="dispatchAction" method="execute">
+			<result>/WEB-INF/view/sys/user/login.jsp</result>
+		</action>
+	</package>
+
+</struts>
